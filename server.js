@@ -1,8 +1,11 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-
+const cors = require('cors');
 // create express app
 const app = express();
+
+//enable cors
+app.use(cors());
 
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }))
@@ -30,7 +33,7 @@ mongoose.Promise = global.Promise;
 mongoose.connect(dbConfig.url, {
     useNewUrlParser: true
 }).then(() => {
-    console.log("Successfully connected to the database");
+    console.log("Shaka brah! Successfully connected to the database");
 }).catch(err => {
     console.log('Could not connect to the database. Exiting now...', err);
     process.exit();
