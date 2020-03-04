@@ -1,3 +1,3 @@
 module.exports = {
-  url: 'mongodb://localhost:27017/timeshift'
+  url: 'mongodb+srv://tShift:timeshift@timeshift-bkhcn.mongodb.net/entries?retryWrites=true&w=majority'
 }
